@@ -1,3 +1,8 @@
+const separador = "----------------------------------------------------------------"
+const next = () => { console.log(`\n${separador}\n`) }
+
+next()
+
 // 1. Funciones flecha
 // Convierte la siguiente función en una función flecha:
 
@@ -8,6 +13,8 @@ function saludar() {
 const hello = () => "hola"
 
 console.log(hello());
+
+next()
 
 //===============================================================
 
@@ -21,6 +28,8 @@ const divide = (a, b) => a / b;
 
 console.log(divide(10, 5))
 
+next()
+
 //===============================================================
 
 // Convierte la siguiente función en una función flecha:
@@ -32,6 +41,8 @@ function miNombre(nombre) {
 const miNimbre2 = (nombre) => `Mi nombre es ${nombre}`
 
 console.log(miNimbre2("Pepe"))
+
+next()
 
 //===============================================================
 
@@ -50,6 +61,8 @@ const test22 = () => console.log("Función test 2 ejecutada.");
 const test12 = (callback) => callback();
 
 test12(test22)
+
+next()
 
 //===============================================================
 
@@ -105,6 +118,8 @@ gente.forEach(persona => {
 
 console.log(mayorDe25);
 
+next()
+
 //===============================================================
 
 // Crea un array con la gente que empieza por J. 
@@ -124,6 +139,8 @@ gente.forEach(persona => {
 
 console.log(empiezaPorJ);
 
+next()
+
 //===============================================================
 
 // 3. Map
@@ -136,6 +153,8 @@ const numbers1 = [4, 5, 6, 7, 8, 9, 10];
 const numbers1Resuelto = numbers1.map(numero => Math.pow(numero, numero))
 
 console.log(numbers1Resuelto)
+
+next()
 
 //===============================================================
 
@@ -154,13 +173,15 @@ const foodList1 = ["Pizza", "Ramen", "Paella", "Entrecot"];
 const ubi4Food = ["Italia", "Japón", "Valencia"]
 
 const comoSoy = foodList1.map((comida, i) => {
-    if (i == 3) {
+    if (i >= ubi4Food.length) {
         return `Aunque no como carne, el ${comida} es sabroso`
     }
     return `Como soy de ${ubi4Food[i]}, amo comer ${comida}`
 })
 
 console.log(comoSoy)
+
+next()
 
 //===============================================================
 
@@ -171,6 +192,8 @@ const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const numbersImpares = numbers.filter(numero => numero % 2 != 0)
 
 console.log(numbersImpares)
+
+next()
 
 //===============================================================
 
@@ -202,6 +225,8 @@ const besaVacas = foodList2.filter(plato => plato.isVeggie == true).map(vegano =
 
 console.log(besaVacas);
 
+next()
+
 //===============================================================
 
 // 5. Reduce
@@ -209,9 +234,11 @@ console.log(besaVacas);
 const numeros = [39, 2, 4, 25, 62];
 // Salida--> 483600
 
-const sumaTotal = numeros.reduce((a, b) => a * b)
+const fullMultiplo = numeros.reduce((a, b) => a * b)
 
-console.log(sumaTotal);
+console.log(fullMultiplo);
+
+next()
 
 //===============================================================
 
@@ -254,6 +281,8 @@ const frasesResultado = staff.map(persona => `${persona.name} es ${persona.role}
 
 console.log(frasesResultado)
 
+next()
+
 //===============================================================
 
 // Filter
@@ -285,6 +314,8 @@ const inventory = [{
 const menosDe300 = inventory.filter(item => item.price > 300).map(item => item.name)
 
 console.log(menosDe300)
+
+next()
 
 //===============================================================
 
